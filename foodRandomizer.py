@@ -6,7 +6,7 @@ import glob
 import tensorflow
 
 # Temporary path buffer, for convenience
-projectPath01 = "C:/UNI/Uni WiSe 22-23/GDW/archive/train/pizza/"
+projectPath01 = "C:/UNI/Uni WiSe 22-23/GDW/ProjectPizza/train"
 projectPath02 = "C:/Users/Marcel/Desktop/Universitaet/2022W/GrundlagenDatenWissenschaften/GDW-Project/train"
 projectPath03 = ""
 projectPath04 = ""
@@ -17,9 +17,9 @@ relativeNonPizzaDir = "/not_pizza"
 relativeMixedFoodDir = "/mixedFood"
 
 # Directories of pizza and not_pizza. Manually change projectPaths depending on local environment.
-pizzaDir = projectPath02 + relativePizzaDir
-nonPizzaDir = projectPath02 + relativeNonPizzaDir
-mixedFoodDir = projectPath02 + relativeMixedFoodDir
+pizzaDir = projectPath01 + relativePizzaDir
+nonPizzaDir = projectPath01 + relativeNonPizzaDir
+mixedFoodDir = projectPath01 + relativeMixedFoodDir
 
 # Amount of pictures per directory
 pizzaDir = os.listdir(pizzaDir)
@@ -33,7 +33,7 @@ def randomizeFoodPictures():
     for i in range(randrange(len(pizzaDir))):
         # The selected random picture
         randomPic = randrange(len(pizzaDir))
-#        print(randomPic)
+       # print(randomPic)
         # Add picture to list if not already added
         if randomPic not in selectedPizza:
             selectedPizza.append(pizzaDir[randomPic])
@@ -42,7 +42,7 @@ def randomizeFoodPictures():
     for i in range(randrange(len(nonPizzaDir))):
         # The selected random picture
         randomPic = randrange(len(nonPizzaDir))
-#        print(randomPic)
+       # print(randomPic)
         # Add picture to list if not already added
         if randomPic not in selectedNonPizza:
             selectedNonPizza.append(pizzaDir[randomPic])
