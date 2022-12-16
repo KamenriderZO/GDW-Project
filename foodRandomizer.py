@@ -51,6 +51,8 @@ def randomizeFoodPictures():
     if not os.path.exists(mixedFoodDir):
         os.makedirs(mixedFoodDir)
 
+    # TODO mix both arrays and copy files towards outputDirectory
+
     print(len(selectedPizza))
     print(selectedPizza)
     print(len(selectedNonPizza))
@@ -59,7 +61,6 @@ def randomizeFoodPictures():
 # Main function of the class
 def main():
     randomizeFoodPictures()
-    # TODO mix both arrays and copy files towards outputDirectory
 
 # ... some python specific ... thing?
 if __name__ == "__main__":
