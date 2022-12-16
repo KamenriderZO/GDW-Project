@@ -6,18 +6,18 @@
 from random import randrange
 import shutil
 import glob
+#
+# input_dir = "C:\\Users\\Carlos\\Downloads\\food-101\\food-101\\"
+# output_dir = "C:\\Users\\Carlos\\Desktop\\nopizza\\"
+# subset_size = 983
 
-input_dir = "C:\\Users\\Carlos\\Downloads\\food-101\\food-101\\"
-output_dir = "C:\\Users\\Carlos\\Desktop\\nopizza\\"
-subset_size = 983
-
-images = glob.glob(input_dir + "images\\*\\*.jpg")
+images = os.listdir("C:/UNI/Uni WiSe 22-23/GDW/archive/train/pizza/")
 selected = []
-
-for i in range(subset_size):
-    r = randrange(len(images))
-    selected.append(images[r])
-    del images[r]
-
-for f in selected:
-    shutil.copy(f, output_dir)
+#
+# for i in range(subset_size):
+#     r = randrange(len(images))
+#     selected.append(images[r])
+#     del images[r]
+#
+# for f in selected:
+#     shutil.copy(f, output_dir)
